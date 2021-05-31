@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-plusplus */
-function validacaoCpf(cpf : string): boolean {
+function validaCpf(cpf : string): boolean {
   if (cpf == null) {
     return false;
   }
@@ -58,4 +58,4 @@ function validacaoCpf(cpf : string): boolean {
   return true;
 }
 
-export default validacaoCpf;
+export default validaCpf;

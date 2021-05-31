@@ -1,7 +1,7 @@
 {
   "name": "lib_node",
   "version": "1.0.0",
-  "main": "src/modules",
+  "main": "./src/modules/index.ts",
   "license": "MIT",
   "scripts": {
     "test": "jest"
