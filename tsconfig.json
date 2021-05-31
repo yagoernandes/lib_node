@@ -3,7 +3,7 @@
     "target": "es2017",
     "module": "commonjs",
     "allowJs": true,
-    "outDir": "./dist/js",
+    "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "strictPropertyInitialization": false,
@@ -18,11 +18,11 @@
     "skipLibCheck": true,
     "typeRoots": ["node_modules/@types"],
     "types": ["jest", "node"],
-    // "paths": {
-    //   "@schemas/*": ["schemas/*"],
-    //   "@services/*": ["services/*"],
-    //   "@routes/*": ["routes/*"]
-    // }
+    "paths": {
+      "@schemas/*": ["schemas/*"],
+      "@services/*": ["services/*"],
+      "@routes/*": ["routes/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]
