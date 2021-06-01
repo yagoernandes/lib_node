@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "./src/modules/index.ts",
   "license": "MIT",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "dependencies": {
   },
