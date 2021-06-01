@@ -1,9 +1,9 @@
 {
   "name": "mxt-tools",
   "version": "1.0.0",
-  "main": "./dist/index.js",
+  "main": "./dist/modules/index.js",
   "license": "MIT",
-  "types": "dist/index.d.ts",
+  "types": "dist/modules/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc"
