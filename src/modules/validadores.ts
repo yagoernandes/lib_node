@@ -1,14 +1,15 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable no-plusplus */
-function validacaoCpf(cpf : string): boolean {
+function verificaCpfValido(cpf : string): boolean {
   if (cpf == null) {
     return false;
   }
-  if ((cpf === '00000000000') || (cpf === '11111111111')
-  || (cpf === '22222222222') || (cpf === '33333333333')
-  || (cpf === '44444444444') || (cpf === '55555555555')
-    || (cpf === '66666666666') || (cpf === '77777777777')
-    || (cpf === '88888888888') || (cpf === '99999999999')) {
+
+  const cpfLimpo = cpf.replace(/[^\w\s]/gi, '');
+
+  if ((cpfLimpo === '00000000000') || (cpfLimpo === '11111111111')
+    || (cpfLimpo === '22222222222') || (cpfLimpo === '33333333333')
+    || (cpfLimpo === '44444444444') || (cpfLimpo === '55555555555')
+    || (cpfLimpo === '66666666666') || (cpfLimpo === '77777777777')
+    || (cpfLimpo === '88888888888') || (cpfLimpo === '99999999999')) {
     return false;
   }
   let numero = 0;
@@ -20,8 +21,8 @@ function validacaoCpf(cpf : string): boolean {
   let digito1 = 0;
   let digito2 = 0;
   let cpfAux = '';
-  cpfAux = cpf.substring(0, 9);
-  for (let i = 0; i < 9; i++) {
+  cpfAux = cpfLimpo.substring(0, 9);
+  for (let i = 0; i < 9; i += 1) {
     caracter = cpfAux.charAt(i);
     if (numeros.search(caracter) === -1) {
       return false;
@@ -29,7 +30,7 @@ function validacaoCpf(cpf : string): boolean {
 
     numero = Number(caracter);
     somatorio += (numero * j);
-    j--;
+    j -= 1;
   }
   resto = somatorio % 11;
   digito1 = 11 - resto;
@@ -39,11 +40,11 @@ function validacaoCpf(cpf : string): boolean {
   j = 11;
   somatorio = 0;
   cpfAux += digito1;
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i += 1) {
     caracter = cpfAux.charAt(i);
     numero = Number(caracter);
     somatorio += (numero * j);
-    j--;
+    j -= 1;
   }
   resto = somatorio % 11;
   digito2 = 11 - resto;
@@ -51,11 +52,11 @@ function validacaoCpf(cpf : string): boolean {
     digito2 = 0;
   }
   cpfAux += digito2;
-  if (cpf != cpfAux) {
+  if (cpfLimpo !== cpfAux) {
     return false;
   }
 
   return true;
 }
 
-export default validacaoCpf;
+export default verificaCpfValido;

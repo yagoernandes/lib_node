@@ -1,4 +1,3 @@
-import validaCpf from './teste';
-import validacaoCpf from './validadores';
+import verificaCpfValido from './validadores';
 
-export { validaCpf, validacaoCpf };
+export default verificaCpfValido;

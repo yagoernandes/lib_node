@@ -11,7 +11,7 @@ module.exports = {
   collectCoverage: true,
 
   collectCoverageFrom: [
-    'src/services/**/*.ts',
+    'src/modules/**/*.ts',
   ],
 
   // The directory where Jest should output its coverage files
@@ -23,7 +23,7 @@ module.exports = {
 
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
 
-  preset: '@shelf/jest-mongodb',
+  preset: 'ts-jest',
 
   testEnvironment: 'node',
 
