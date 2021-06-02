@@ -1,5 +1,5 @@
 {
-  "name": "mxt-tools",
+  "name": "lib-node",
   "version": "1.0.0",
   "main": "./dist/modules/index.js",
   "license": "MIT",
